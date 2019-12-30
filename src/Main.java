@@ -1,3 +1,6 @@
+import Animals.Cat;
+import Animals.Lion;
+
 import java.util.UUID;
 
 public class Main {
@@ -22,10 +25,17 @@ public class Main {
         RegullarAccount account2 = new RegullarAccount(UUID.randomUUID().toString(), petrov_sidr, 0);
         System.out.println(account);
 
-//Задания №2. Реализовать статический метод перевода денег
+//Задание №2. Реализовать статический метод перевода денег
         AccountUtils.transferMoney(account, account2, 100);
 
+//Задание №5. Написать структуру: животное, млекопитающее, земноводные, кошка (собака), птицы, чайка (голубь, курица)
+        Cat cat = new Cat(4, false, "Barsik", 2);
+        Lion lion = new Lion(4, false);
+//Задание №6. Добавить предыдущую структуру признаками поведения: умеет издавать голос, умеет бегать, умеет плавать.
+        cat.eat();
+        cat.shout();
 
+        lion.hunting();
 
 
     }
