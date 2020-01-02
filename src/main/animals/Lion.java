@@ -1,6 +1,6 @@
-package Animals;
+package main.animals;
 
-public class Lion extends Mammal implements Animals {
+public class Lion extends Mammal {
     public Lion(int countLegs, boolean horns) {
         super(countLegs, horns);
     }
@@ -11,37 +11,28 @@ public class Lion extends Mammal implements Animals {
     }
 
     @Override
-    public void hunting() {//охотиться
+    public void hunt() {//охотиться
         System.out.println("Lion hunting");
     }
 
     @Override
     public void breathe() {//дышать
-        System.out.println("breathe");
+        System.out.println("Lion breathe");
     }
 
     @Override
     public void shout() {//кричать
-        System.out.println("shout");
+        System.out.println("Lion shout");
     }
 
     @Override
     public void eat() {//кушать
-        System.out.println("eat");
+        System.out.println("Lion eat");
     }
 
     @Override
     public void swim() {//плавать
-        System.out.println("swim");
+        System.out.println("Lion swim");
     }
-
-    @Override
-    public String toString() {
-        return "Lion{" +
-                "countLegs=" + countLegs +
-                ", horns=" + horns +
-                '}';
-    }
-
 
 }

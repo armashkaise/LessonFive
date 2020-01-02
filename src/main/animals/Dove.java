@@ -1,6 +1,6 @@
-package Animals;
+package main.animals;
 
-public class Dove extends Bird implements Animals {//голубь
+public class Dove extends Bird {//голубь
 
     public Dove(boolean wings) {
         super(wings);
@@ -8,26 +8,26 @@ public class Dove extends Bird implements Animals {//голубь
 
     @Override
     public void breathe() {//дышать
-        System.out.println("breathe");
+        System.out.println("Dove breathe");
     }
 
     @Override
     public void shout() {//кричать
-        System.out.println("shout");
+        System.out.println("Dove shout");
     }
 
     @Override
     public void eat() {//кушать
-        System.out.println("eat");
+        System.out.println("Dove eat");
     }
 
     @Override
     public void swim() {//плавать
-        System.out.println("swim");
+        System.out.println("Dove swim");
     }
 
     @Override
-    void fly() {
-        System.out.println("fly");//летать
+    public void fly() {
+        System.out.println("Dove fly");//летать
     }
 }

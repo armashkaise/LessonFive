@@ -1,15 +1,12 @@
+package main;
+
 import java.util.Objects;
 
-public class GoldAccount implements IAccountInterface {
-    public final String id;
-    public final User user;
-    protected int balans;
+public class GoldAccount extends Accounts {
     private int cashBackPercent;
 
     public GoldAccount(String id, User user, int balans, int cashBackPercent) {
-        this.id = id;
-        this.user = user;
-        this.balans = balans;
+        super(id, user, balans);
         this.cashBackPercent = cashBackPercent;
     }
 
@@ -22,28 +19,14 @@ public class GoldAccount implements IAccountInterface {
     }
 
     @Override
-    public String getId() {
-        return null;
-    }
-
-    @Override
-    public User getUser() {
-        return null;
-    }
-
-    @Override
-    public int getBalans() {
-        return 0;
-    }
-
-    @Override
     public void changeBalans(int amount) {
-        boolean isBalansAllowIncreasing = balans > 0 && amount < 0 && balans <= amount;
-        if (isBalansAllowIncreasing) return;
-        if (amount < 0){
-            this.balans *= 1+cashBackPercent;
+        if (isBalansAllowIncreasing(amount)) return;
+        if (amount > 0){
+//            this.balans *= 1+cashBackPercent;
+            this.balans += amount + (amount * cashBackPercent /100);
+        } else {
+            this.balans += amount;
         }
-        this.balans += amount;
     }
 
     @Override

@@ -1,17 +1,21 @@
-package Animals;
+package main.animals;
 // млекопитающие
-abstract public class Mammal {
-    int countLegs; //количество ног
-    boolean horns;//рога
+public class Mammal extends Animal {
+    private int countLegs; //количество ног
+    private boolean horns;//рога
 
     public Mammal(int countLegs, boolean horns) {
         this.countLegs = countLegs;
         this.horns = horns;
     }
 
-    public abstract void go();//идти
+    public void go(){
 
-    public abstract void hunting();//охотиться
+    }//идти
+
+    public void hunt(){
+
+    }//охотиться
 
     public int getCountLegs() {
         return countLegs;
@@ -27,5 +31,25 @@ abstract public class Mammal {
 
     public void setHorns(boolean horns) {
         this.horns = horns;
+    }
+
+    @Override
+    public void breathe() {
+
+    }
+
+    @Override
+    public void shout() {
+
+    }
+
+    @Override
+    public void eat() {
+
+    }
+
+    @Override
+    public void swim() {
+
     }
 }
