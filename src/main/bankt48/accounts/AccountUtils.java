@@ -1,4 +1,4 @@
-package main;
+package main.bankt48.accounts;
 
 final public class AccountUtils {
     private AccountUtils() {

@@ -1,21 +1,14 @@
 package main.animals;
 // млекопитающие
-public class Mammal extends Animal {
+abstract public class Mammal extends Animal {
     private int countLegs; //количество ног
     private boolean horns;//рога
 
-    public Mammal(int countLegs, boolean horns) {
+    public Mammal(boolean alive, int countLegs, boolean horns) {
+        super(alive);
         this.countLegs = countLegs;
         this.horns = horns;
     }
-
-    public void go(){
-
-    }//идти
-
-    public void hunt(){
-
-    }//охотиться
 
     public int getCountLegs() {
         return countLegs;
@@ -33,23 +26,11 @@ public class Mammal extends Animal {
         this.horns = horns;
     }
 
-    @Override
-    public void breathe() {
 
-    }
 
-    @Override
-    public void shout() {
 
-    }
 
-    @Override
-    public void eat() {
 
-    }
 
-    @Override
-    public void swim() {
 
-    }
 }

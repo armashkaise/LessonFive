@@ -1,4 +1,4 @@
-package main;
+package main.bankt48.users;
 
 import java.util.Objects;
 

@@ -1,18 +1,13 @@
 package main.animals;
 
-public class Lion extends Mammal {
-    public Lion(int countLegs, boolean horns) {
-        super(countLegs, horns);
+public class Lion extends Mammal implements Shoutable, CanRun, Defensible, CanHunt {
+    public Lion(boolean alive, int countLegs, boolean horns) {
+        super(alive, countLegs, horns);
     }
 
     @Override
-    public void go() {//идти
-        System.out.println("Lion go");
-    }
-
-    @Override
-    public void hunt() {//охотиться
-        System.out.println("Lion hunting");
+    public String shout() {
+        return "Рррррр";
     }
 
     @Override
@@ -21,18 +16,13 @@ public class Lion extends Mammal {
     }
 
     @Override
-    public void shout() {//кричать
-        System.out.println("Lion shout");
+    public void someMethod() {
+
     }
 
     @Override
     public void eat() {//кушать
         System.out.println("Lion eat");
-    }
-
-    @Override
-    public void swim() {//плавать
-        System.out.println("Lion swim");
     }
 
 }

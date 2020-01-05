@@ -1,15 +1,15 @@
 package main.animals;
 
-public class Bird extends Animal {
-    public Bird(boolean wings) {
-        this.wings = wings;
-    }
+public abstract class Bird extends Animal{
 
     private boolean wings;//крылья
 
-    public void fly(){
-
+    public Bird(boolean alive, boolean wings) {
+        super(alive);
+        this.wings = wings;
     }
+
+    public abstract void fly();
 
     public boolean isWings() {
         return wings;
@@ -19,23 +19,5 @@ public class Bird extends Animal {
         this.wings = wings;
     }
 
-    @Override
-    public void breathe() {
 
-    }
-
-    @Override
-    public void shout() {
-
-    }
-
-    @Override
-    public void eat() {
-
-    }
-
-    @Override
-    public void swim() {
-
-    }
 }

@@ -1,6 +1,10 @@
 package main.animals;
 //
 public class Amphibians extends Animal {
+    public Amphibians(boolean alive) {
+        super(alive);
+    }
+
     public void jump(){
         System.out.println("jump");//прыгать
     }
@@ -15,18 +19,18 @@ public class Amphibians extends Animal {
 
     }
 
-    @Override
-    public void shout() {
-
-    }
+//    @Override
+//    public void shout() {
+//
+//    }
 
     @Override
     public void eat() {
 
     }
 
-    @Override
-    public void swim() {
-
-    }
+//    @Override
+//    public void swim() {
+//
+//    }
 }

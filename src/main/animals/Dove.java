@@ -1,9 +1,10 @@
 package main.animals;
 
-public class Dove extends Bird {//голубь
+public class Dove extends Bird implements Shoutable {//голубь
 
-    public Dove(boolean wings) {
-        super(wings);
+
+    public Dove(boolean alive, boolean wings) {
+        super(alive, wings);
     }
 
     @Override
@@ -12,8 +13,8 @@ public class Dove extends Bird {//голубь
     }
 
     @Override
-    public void shout() {//кричать
-        System.out.println("Dove shout");
+    public String shout() {
+        return "Dove shout";
     }
 
     @Override
@@ -21,10 +22,7 @@ public class Dove extends Bird {//голубь
         System.out.println("Dove eat");
     }
 
-    @Override
-    public void swim() {//плавать
-        System.out.println("Dove swim");
-    }
+
 
     @Override
     public void fly() {

@@ -1,4 +1,4 @@
-package main;
+package main.bankt48.accounts;
 
 public interface Change {
 

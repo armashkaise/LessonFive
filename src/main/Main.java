@@ -1,9 +1,11 @@
 package main;
 
-import main.animals.Bird;
-import main.animals.Cat;
-import main.animals.Dove;
-import main.animals.Lion;
+import main.animals.*;
+import main.bankt48.accounts.AccountUtils;
+import main.bankt48.accounts.Accounts;
+import main.bankt48.accounts.GoldAccount;
+import main.bankt48.accounts.RegullarAccount;
+import main.bankt48.users.User;
 
 import java.util.UUID;
 
@@ -33,7 +35,7 @@ public class Main {
 //Задание №4. Изменить реализацию аккаунтов с использования абстрактного класса на использование интерфейса
         RegullarAccount account = new RegullarAccount(UUID.randomUUID().toString(), ivanov_petr, 100);
         Accounts account2 = new RegullarAccount(UUID.randomUUID().toString(), petrov_sidr, 0);
-        GoldAccount  account3 = new GoldAccount(UUID.randomUUID().toString(), sidrov_ivan, 0, 3);
+        GoldAccount account3 = new GoldAccount(UUID.randomUUID().toString(), sidrov_ivan, 0, 3);
         //System.out.println(account);
 
 //Задание №2. Реализовать статический метод перевода денег
@@ -42,16 +44,33 @@ public class Main {
         System.out.println(account3);
 
 //Задание №5. Написать структуру: животное, млекопитающее, земноводные, кошка (собака), птицы, чайка (голубь, курица)
-        Cat cat = new Cat(4, false, "Barsik", 2);
-        Lion lion = new Lion(4, false);
-        Bird dove = new Dove(true);
+        Cat cat = new Cat(true,4, false, "Barsik", 2);
+        Lion lion = new Lion(true,4, false);
+
+//        makeThemShout(cat);
+        //Bird dove = new Dove(true, true);
+
+//        makeThemShout(lion);
 //Задание №6. Добавить предыдущую структуру признаками поведения: умеет издавать голос, умеет бегать, умеет плавать.
-        cat.eat();
-        cat.shout();
 
-        lion.hunt();
-
-        dove.fly();
+        checkIfCanDefence(cat);
+        checkIfCanDefence(lion);
 
     }
+
+    private static void checkIfCanDefence(Object object) {
+
+            System.out.println("does can " + object + " defence me? " + (object instanceof Defensible));
+            System.out.println("does can " + object + " hunt? " + (object instanceof CanHunt));
+            System.out.println("does can " + object + " run? " + (object instanceof CanRun));
+
+    }
+
+    public static void makeThemShout(Shoutable[] shoutables){
+        for (Shoutable shoutable : shoutables) {
+            System.out.println(shoutable);
+        }
+    }
+
+
 }

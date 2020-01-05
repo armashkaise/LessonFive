@@ -2,12 +2,12 @@ package main.animals;
 
 import java.util.Objects;
 
-public class Cat extends Mammal {
+public class Cat extends Mammal implements Shoutable, CanRun {
     private String name;
     private int age;
 
-    public Cat(int countLegs, boolean horns, String name, int age) {
-        super(countLegs, horns);
+    public Cat(boolean alive, int countLegs, boolean horns, String name, int age) {
+        super(alive, countLegs, horns);
         this.name = name;
         this.age = age;
     }
@@ -29,33 +29,24 @@ public class Cat extends Mammal {
     }
 
     @Override
+    public String shout() {
+        return "Мяу";
+    }
+
+    @Override
+    public void someMethod() {
+
+    }
+
+    @Override
     public void breathe() {//дышать
         System.out.println("Cat breathe");
     }
 
-    @Override
-    public void shout() {//кричать
-        System.out.println("Cat мяу");
-    }
 
     @Override
     public void eat() {//кушать
         System.out.println("Cat eat");
-    }
-
-    @Override
-    public void swim() {//плавать
-        System.out.println("Cat swim");
-    }
-
-    @Override
-    public void go() {//идти
-        System.out.println("Cat go");
-    }
-
-    @Override
-    public void hunt() {//охотиться
-        System.out.println("Cat hunting");
     }
 
     @Override
